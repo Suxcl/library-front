@@ -5,9 +5,11 @@
         </div>
     </div>
     <Meals :meals="meals"/>
+    <Footer></Footer>
 </template>
 
 <script setup>
+import Footer from "../components/Footer.vue"
 import {computed} from '@vue/reactivity';
 import store from '../store';
 import {useRoute} from 'vue-router';

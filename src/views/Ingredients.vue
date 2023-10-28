@@ -14,14 +14,16 @@
         }"
         v-for="ingredient of computedIngredients"
         v-bind:key="ingredient.idIngredient"
-        class="block bg-white rounded p-3 mb-3 shadow">
+        class="block bg-white rounded p-3 mb-3 shadow text-black">
         <h3 class=" text-2xl font-bold mb-2">{{ ingredient.strIngredient}}</h3>
         <p>{{ ingredient.strDescription }}</p>
         </router-link>
     </div>
+    <Footer></Footer>
 </template>
 
 <script setup>
+import Footer from '../components/Footer.vue'
 import {computed} from '@vue/reactivity'
 import { onMounted, ref } from "vue";
 import axiosClient from "../axiosClient";

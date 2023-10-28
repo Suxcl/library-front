@@ -7,8 +7,8 @@
         class="rounded-t-xl w-full h-48 object-cover">
        </router-link>
         <div class="p-3">
-        <h3 class=" font-semibold">{{ meal.strMeal }}</h3>
-        <p class="mb-4"> Lorem Ipsum dolor sit amel consectetur, adipsing elit.</p>
+        <h3 class="dark:text-black font-semibold">{{ meal.strMeal }}</h3>
+        <p class="mb-4 dark:text-black"> Lorem Ipsum dolor sit amel consectetur, adipsing elit.</p>
         <div class="flex items-center justify-between">
             <YouTubeButton :href="meal.strYouTube">YouTube</YouTubeButton>
         </div>
@@ -17,7 +17,6 @@
 </template>
 
 <script setup>
-import YouTubeButton from '../components/YouTubeButton.vue'
 
 const {meal} = defineProps({
     meal: {

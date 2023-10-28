@@ -9,9 +9,11 @@
          />
     </div>
      <Meals :meals="meals"></Meals>
+     <Footer></Footer>
 </template>
 
 <script setup>
+import Footer from '../components/Footer.vue'
 import Meals from '../components/Meals.vue'
 import {computed} from '@vue/reactivity'
 import{onMounted, ref} from 'vue';
