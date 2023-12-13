@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import Footer from '../components/Footer.vue'
+import Footer from '../components/Footer.vue';
 import { computed, onMounted } from "vue";
 import store from "../store";
 import { ref } from 'vue'

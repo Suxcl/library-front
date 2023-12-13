@@ -12,7 +12,6 @@
 <script setup>
 const props = defineProps({
     href:String,
-    slot:"YouTube"
 })
 
 </script>

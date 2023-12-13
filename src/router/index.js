@@ -8,6 +8,8 @@ import Ingredients from '../views/Ingredients.vue'
 import MealsByLetter from '../views/MealsByLetter.vue'
 import MealsByName from '../views/MealsByName.vue'
 import MealDetails from '../views/MealDetails.vue'
+import ShoppingCart from '../views/ShoppingCart.vue'
+
 
 
 const routes = [
@@ -56,6 +58,11 @@ const routes = [
         path: '/register',
         name: 'register',
         component: Register
+    },
+    {
+        path: '/shoppingcart',
+        name: 'shoppingcart',
+        component: ShoppingCart
     }
 
 

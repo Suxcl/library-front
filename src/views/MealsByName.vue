@@ -3,7 +3,7 @@
         <input 
         type="text"
          v-model="keyword"
-         class ="rounded border-2 border-gray-200 w-full" 
+         class ="rounded border-2 border-gray-200 w-full dark:text-black" 
          placeholder="Search for meals"
          @change="searchMeals" 
          />
@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import Footer from '../components/Footer.vue'
+import Footer from '../components/Footer.vue';
 import Meals from '../components/Meals.vue'
 import {computed} from '@vue/reactivity'
 import{onMounted, ref} from 'vue';

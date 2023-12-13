@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  bgColor: false,
   darkMode: "class",
   content: [
     "./index.html",

@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import Footer from '../components/Footer.vue'
+import Footer from '../components/Footer.vue';
 import {computed} from '@vue/reactivity'
 import { onMounted, ref } from "vue";
 import axiosClient from "../axiosClient";

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="flex justify-center gap-2 m-2">
-            <router-link :to="{name: 'byLetter', params:{letter}}" v-for="letter in letters" v-bind:key="letter">{{ letter }}</router-link>
+            <router-link class="hover:scale-125 hover:text-orange-600" :to="{name: 'byLetter', params:{letter}}" v-for="letter in letters" v-bind:key="letter">{{ letter }}</router-link>
         </div>
     </div>
     <Meals :meals="meals"/>
@@ -9,8 +9,8 @@
 </template>
 
 <script setup>
-import Footer from "../components/Footer.vue"
-import {computed} from '@vue/reactivity';
+import Footer from '../components/Footer.vue';
+    import {computed} from '@vue/reactivity';
 import store from '../store';
 import {useRoute} from 'vue-router';
 import { onMounted, watch } from 'vue';

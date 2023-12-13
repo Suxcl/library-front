@@ -5,23 +5,28 @@
     </router-link>
 
   <div class="flex items-center gap-1 dark:text-white">
-    <button @click="toggleDark()" class="bg-white text-black font-bold py-2 px-4 rounded dark:bg-gray-700 dark:text-white">
+    <button @click="toggleDark()" class="bg-white text-black font-bold py-2 px-4 rounded  dark:bg-gray-700 dark:text-white">
+      <i :class="isDark?'pi pi-moon':'pi pi-sun'"></i>
       {{ isDark? "Dark":"Light" }} Mode
     </button>
+    <router-link :to="{name:'shoppingcart'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
 
-    <router-link :to="{name:'byName'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
-      Search Meals
+<i class="pi pi-shopping-cart pr-2"></i>Shopping cart
+</router-link>
+    <router-link :to="{name:'byName'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
+
+      <i class="pi pi-search pr-2"></i>Search Meals
     </router-link>
-    <router-link :to="{name:'byLetter'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
+    <router-link :to="{name:'byLetter'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
       Meals by Letter
     </router-link>
-    <router-link :to="{name:'ingredients'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
+    <router-link :to="{name:'ingredients'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
       Ingredients
     </router-link>
-    <router-link :to="{name:'login'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
+    <router-link :to="{name:'login'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
       Sign in
     </router-link>
-    <router-link :to="{name:'register'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
+    <router-link :to="{name:'register'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
       Sign up
     </router-link>
   </div>
@@ -29,7 +34,7 @@
 </template>
 <script setup> 
 import {useDark, useToggle} from "@vueuse/core";
-
+import 'primeicons/primeicons.css';
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 </script>
