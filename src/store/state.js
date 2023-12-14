@@ -1,5 +1,5 @@
 export default{
-    searchedMeals: [],
-    mealsByLetter: [],
-    mealsByIngredient: []
+    searchedBooks: [],
+    booksByLetter: [],
+    booksByAuthor: []
 }

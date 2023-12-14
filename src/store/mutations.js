@@ -1,12 +1,12 @@
-export  function setSearchedMeals(state,meals)
+export  function setSearchedBooks(state,books)
 {
-state.searchedMeals = meals
+state.searchedBooks = books
 }
-export  function setMealsByLetter(state,meals)
+export  function setBooksByLetter(state,books)
 {
-state.mealsByLetter = meals
+state.booksByLetter = books
 }
-export  function setMealsByIngredients(state,meals)
+export  function setBooksByAuthors(state,books)
 {
-state.mealsByIngredient = meals
+state.booksByAuthor = books
 }

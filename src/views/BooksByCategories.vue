@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="flex justify-center gap-2 m-2">
-            <router-link class="hover:scale-125 hover:text-orange-600" :to="{name: 'byLetter', params:{letter}}" v-for="letter in letters" v-bind:key="letter">{{ letter }}</router-link>
+            <router-link class="hover:scale-125 hover:text-orange-600" :to="{name: 'byCategory', params:{letter}}" v-for="letter in letters" v-bind:key="letter">{{ letter }}</router-link>
         </div>
     </div>
-    <Meals :meals="meals"/>
+    <Books :books="books"/>
     <Footer></Footer>
 </template>
 
@@ -14,13 +14,13 @@ import Footer from '../components/Footer.vue';
 import store from '../store';
 import {useRoute} from 'vue-router';
 import { onMounted, watch } from 'vue';
-import Meals from '../components/Meals.vue'
+import Books from '../components/Books.vue'
 const route =useRoute();
 const letters= "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const meals = computed(()=>store.state.mealsByLetter);
+const books = computed(()=>store.state.booksByLetter);
 
 watch(route,()=>{
-    store.dispatch('searchMealsByLetter',route.params.letter)
+    store.dispatch('searchBooksByLetter',route.params.letter)
 
 })
 

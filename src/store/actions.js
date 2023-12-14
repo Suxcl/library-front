@@ -1,24 +1,24 @@
 import axiosClient from "../axiosClient";
-export function searchMeals({commit }, keyword){
+export function searchBooks({commit }, keyword){
    
         axiosClient.get(`search.php?s=${keyword}`)
         .then(({data})=>{
-            commit('setSearchedMeals', data.meals)
+            commit('setSearchedBooks', data.meals)
         })
         
 }
-export function searchMealsByLetter({commit }, letter){
+export function searchBooksByLetter({commit }, letter){
    
     axiosClient.get(`search.php?f=${letter}`)
     .then(({data})=>{
-        commit('setMealsByLetter', data.meals)
+        commit('setBooksByLetter', data.meals)
     })
     
 }
-export function searchMealsByIngredient({commit }, ing){
+export function searchBooksByAuthor({commit }, ing){
     axiosClient.get(`filter.php?i=${ing}`)
     .then(({data})=>{
-        commit('setMealsByIngredients', data.meals)
+        commit('setBooksByAuthors', data.meals)
     })
     
 }

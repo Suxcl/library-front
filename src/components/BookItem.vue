@@ -1,13 +1,13 @@
 <template>
            <div  class="bg-white shadow rounded-xl transition-all hover:scale-105 " >
-       <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
+       <router-link :to="{name: 'bookDetails', params: {id: book.idMeal}}">
         <img 
-        :src="meal.strMealThumb" 
-        :alt="meal.strMeal" 
+        :src="book.strMealThumb" 
+        :alt="book.strMeal" 
         class="rounded-t-xl w-full h-48 object-cover">
        </router-link>
         <div class="p-3">
-        <h3 class="dark:text-black font-semibold">{{ meal.strMeal }} </h3>   
+        <h3 class="dark:text-black font-semibold">{{ book.strMeal }} </h3>   
         <p class="mb-4 dark:text-black"> Lorem Ipsum dolor sit amel consectetur, adipsing elit.</p>
         <div class="flex items-center justify-between">
         </div>
@@ -32,7 +32,7 @@ import 'vue3-toastify/dist/index.css';
     
 export default {
   props: {
-meal: Object,
+book: Object,
 
 },
   data() {
@@ -47,7 +47,7 @@ meal: Object,
       {
         return false;
       }
-      if(products.some(item => JSON.stringify(item) === JSON.stringify(this.meal)))
+      if(products.some(item => JSON.stringify(item) === JSON.stringify(this.book)))
       {
         return true;
       }
@@ -58,13 +58,13 @@ meal: Object,
       var products = JSON.parse(localStorage.getItem('products')) || [];
       if(this.active)
       {
-        var index = products.findIndex(x => x.strMeal === this.meal.strMeal);
+        var index = products.findIndex(x => x.strMeal === this.book.strMeal);
         products.splice(index, 1);
-        toast.info(this.meal.strMeal + ' deleted from cart');
+        toast.info(this.book.strMeal + ' deleted from cart');
       }
       else{
-        products.push(this.meal);
-        toast.info(this.meal.strMeal + ' added to cart');
+        products.push(this.book);
+        toast.info(this.book.strMeal + ' added to cart');
       }
       localStorage.setItem('products', JSON.stringify(products));
       this.active = !this.active;

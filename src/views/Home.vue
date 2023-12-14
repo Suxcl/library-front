@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col p-8 dark:text-black">
         <input type="text" class ="rounded border-2 dark:text-black border-gray-200 w-full" 
-        placeholder="Search for meals ">
+        placeholder="Search for books ">
 
 
 </div>

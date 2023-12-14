@@ -15,13 +15,13 @@
 </router-link>
     <router-link :to="{name:'byName'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
 
-      <i class="pi pi-search pr-2"></i>Search Meals
+      <i class="pi pi-search pr-2"></i>Search Books
     </router-link>
-    <router-link :to="{name:'byLetter'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
-      Meals by Letter
+    <router-link :to="{name:'byCategory'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
+      Book by Category
     </router-link>
-    <router-link :to="{name:'ingredients'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
-      Ingredients
+    <router-link :to="{name:'authors'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
+      Authors
     </router-link>
     <router-link :to="{name:'login'}" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-200 dark:hover:bg-purple-700">
       Sign in

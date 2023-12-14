@@ -1,5 +1,5 @@
 <template>
-<Meals :meals="meals"/>
+<Books :books="books"/>
 </template>
 
 <script setup>
@@ -7,11 +7,11 @@ import {computed} from '@vue/reactivity'
 import {onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
-import Meals from '../components/Meals.vue'
+import Books from '../components/Books.vue'
 const route = useRoute();
-const meals = computed(()=> store.state.mealsByIngredient)
+const books = computed(()=> store.state.booksByAuthor)
 
 onMounted(()=>{
-    store.dispatch('searchMealsByIngredient', route.params.ingredient)
+    store.dispatch('searchBooksByAuthor', route.params.author)
 })
 </script>

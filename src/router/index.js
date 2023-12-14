@@ -3,11 +3,11 @@ import Home from '../views/Home.vue'
 import DefaultLayout from '../components/DefaultLayout.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
-import MealsByIngredients from '../views/MealsByIngredients.vue'
-import Ingredients from '../views/Ingredients.vue'
-import MealsByLetter from '../views/MealsByLetter.vue'
-import MealsByName from '../views/MealsByName.vue'
-import MealDetails from '../views/MealDetails.vue'
+import BooksByAuthor from '../views/BooksByAuthor.vue'
+import Authors from '../views/Authors.vue'
+import BooksByCategories from '../views/BooksByCategories.vue'
+import BooksByName from '../views/BooksByName.vue' 
+import BookDetails from '../views/BookDetails.vue'
 import ShoppingCart from '../views/ShoppingCart.vue'
 
 
@@ -25,27 +25,27 @@ const routes = [
             {
                 path: '/by-Name/:name?',
                 name: 'byName',
-                component: MealsByName
+                component: BooksByName
             },
             {
-                path: '/ingredients',
-                name: 'ingredients',
-                component: Ingredients
+                path: '/authors',
+                name: 'authors',
+                component: Authors
             },
             {
-                path: '/by-Ingredient/:ingredient',
-                name: 'byIngredient',
-                component: MealsByIngredients
+                path: '/by-Author/:author',
+                name: 'byAuthor',
+                component: BooksByAuthor
             },
             {
-                path: '/by-Letter/:letter?',
-                name: 'byLetter',
-                component: MealsByLetter,
+                path: '/by-Category/:category?',
+                name: 'byCategory',
+                component: BooksByCategories,
             },
             {
-                path: '/meal/:id',
-                name: 'mealDetails',
-                component: MealDetails,
+                path: '/book/:id',
+                name: 'bookDetails',
+                component: BookDetails,
             }
         ]
     },
