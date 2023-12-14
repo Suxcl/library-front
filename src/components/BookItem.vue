@@ -1,13 +1,13 @@
 <template>
            <div  class="bg-white shadow rounded-xl transition-all hover:scale-105 " >
-       <router-link :to="{name: 'bookDetails', params: {id: book.idMeal}}">
+       <router-link :to="{name: 'bookDetails', params: {id: book.id}}">
         <img 
-        :src="book.strMealThumb" 
-        :alt="book.strMeal" 
+        :src="book.coverUrl" 
+        :alt="book.title" 
         class="rounded-t-xl w-full h-48 object-cover">
        </router-link>
         <div class="p-3">
-        <h3 class="dark:text-black font-semibold">{{ book.strMeal }} </h3>   
+        <h3 class="dark:text-black font-semibold">{{ book.title }} </h3>   
         <p class="mb-4 dark:text-black"> Lorem Ipsum dolor sit amel consectetur, adipsing elit.</p>
         <div class="flex items-center justify-between">
         </div>
@@ -58,13 +58,13 @@ book: Object,
       var products = JSON.parse(localStorage.getItem('products')) || [];
       if(this.active)
       {
-        var index = products.findIndex(x => x.strMeal === this.book.strMeal);
+        var index = products.findIndex(x => x.strMeal === this.book.title);
         products.splice(index, 1);
-        toast.info(this.book.strMeal + ' deleted from cart');
+        toast.info(this.book.title + ' deleted from cart');
       }
       else{
         products.push(this.book);
-        toast.info(this.book.strMeal + ' added to cart');
+        toast.info(this.book.title + ' added to cart');
       }
       localStorage.setItem('products', JSON.stringify(products));
       this.active = !this.active;
