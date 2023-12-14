@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-[800px] mx-auto p-8">
-        <h1 class="text-5xl font-bold mb-5">{{ book.strMeal }}</h1>
+        <h1 class="text-5xl font-bold mb-5">{{ book.title }}</h1>
         <img :src="book.strMealThumb" :alt="book.StrMeal" class="w-full">
         <div class="grid grid-cols-1 sm:grid-cols-3 text-lg py-2">
             <div>

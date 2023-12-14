@@ -2,7 +2,7 @@
            <div  class="bg-white shadow rounded-xl transition-all hover:scale-105 " >
        <router-link :to="{name: 'bookDetails', params: {id: book.id}}">
         <img 
-        :src="book.coverUrl" 
+        :src="book.coverUrl.slice(5)" 
         :alt="book.title" 
         class="rounded-t-xl w-full h-48 object-cover">
        </router-link>
@@ -26,7 +26,6 @@
 
 </template>
 <script>
-import { onBeforeMount, onMounted } from 'vue';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
     
