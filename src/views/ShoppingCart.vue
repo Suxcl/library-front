@@ -89,7 +89,7 @@ data() {
 methods: {
   borrowRequest()
 {
-    console.log('nigger');
+    console.log('borrowRequest');
 },
   deleteFromCart(item)
 {
